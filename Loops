@@ -1,0 +1,20 @@
+#INPUT
+muffins = 10
+cupcakes = 10
+goods = input ('Would you like a muffin or cupcake? ')
+
+#PROCESS
+while goods != '0':
+        if goods == 'muffin' and muffins > 0:
+                muffins = muffins-1
+                if goods == 'muffin' and muffins == 0:
+                        print('muffins out of stock')
+        elif goods == 'cupcake' and cupcakes > 0:
+                cupcakes = cupcakes-1
+                if goods == 'cupcake' and cupcakes == 0:
+                        print('cupcakes out of stock')
+        goods = input ('Would you like a muffin or cupcake? ')
+
+#OUTPUT
+print('muffins:', muffins, 'cupcakes:', cupcakes)
+
