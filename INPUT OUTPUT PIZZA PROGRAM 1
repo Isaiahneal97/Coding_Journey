@@ -1,0 +1,12 @@
+# PROGRAM 1
+
+family = 4
+user_input_hm_pizza_slices = int(input('There are 4 in a family. How many slices of pizza is each member requesting? '))
+slice_per_member = (user_input_hm_pizza_slices * family)
+pizza = 8
+user_input_hm_boxes = int(input('There are 8 slices per pizza box. How many boxes would you like? '))
+pizza_box = (user_input_hm_boxes * pizza)
+total = int(slice_per_member/pizza)
+total_input = int(slice_per_member/pizza_box)
+print('In order to distribute ', user_input_hm_pizza_slices, 'slices of pizza per family member, you will need a total of ', total, 'pizza boxes. If your input of', total_input, 'boxes of pizza is greater than or equal to my calculations of ', total, 'than proceed. And great math skills :)' )
+
