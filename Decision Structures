@@ -1,0 +1,26 @@
+#INPUT:
+#AVERAGE DRIVER'S TRAVEL
+average_speed = int(input("What is the speed limit of the road ? "))
+distance_traveled = int(input("How far in miles must you travel? "))
+average_driver_time = distance_traveled/average_speed
+average_minutes = average_driver_time*60
+
+#USER'S TRAVEL 
+print('It takes the average driver', average_minutes, 'minutes to complete the travel.' )
+user_speed=int(input("If you could shorten the time spent traveling, what would be your new speed? "))
+
+if user_speed <average_speed:
+    print("Your new speed is less than the average speed. Without calculation, you'll arrive later than the average driver. " )
+
+if user_speed>1.5*average_speed:
+    print("TICKET!\n OMG SLOW DOWN!\n  YOU'LL MAKE IT THERE!")
+
+time = distance_traveled/user_speed
+user_driving_in_minutes = time*60
+comparison= round(average_minutes - user_driving_in_minutes)
+
+#OUTPUT:
+print ('With the new speed adjusted in my calculations, it will take you approximately ')
+print ((f'{user_driving_in_minutes:.2f}'), 'minutes to arrive to your destination estimated.....')
+print (comparison, 'minutes quicker than the average driver. Safe driving.')
+
