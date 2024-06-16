@@ -1,0 +1,31 @@
+#INPUT
+#first line must execute 'Please enter a time: hours, then minutes.'
+#user_hours_worked= *provided by user*
+#user_minutes_worked= *provided by user*
+
+#PROCESS
+def main():
+    print('Please enter a time: hours, then minutes. ') 
+    user_hours_worked=int(input('Enter a value between 0 and 23? ')) 
+    if user_hours_worked>24 or user_hours_worked<0:    
+        print('ERROR: It is impossible to work this many hours in a day. Try this program again. ')
+        exit()
+    if user_hours_worked==24:
+        print('You entered 24 hours.')
+        exit()
+    user_minutes_worked=int(input('enter a value between 0 and 59? '))
+    if user_minutes_worked>60 or user_minutes_worked<0:
+        print ('ERROR: You must stay within range. Try again.')
+        exit()
+    if user_minutes_worked==60:
+        print('You have worked', user_hours_worked + 1, 'hours.')
+              
+#OUTPUT
+    print('You entered',user_hours_worked,'hours and',user_minutes_worked,'minutes.')
+    
+main()
+
+
+
+#Test 1: enter data within range.
+#Test 2: enter data out of range
