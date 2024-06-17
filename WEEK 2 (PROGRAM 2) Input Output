@@ -1,0 +1,17 @@
+import math
+
+family = 4
+user_input_hm_pizza_slices1 = int(input('How many slices of pizza is member # 1 requesting? '))
+user_input_hm_pizza_slices2 = int(input('How many slices of pizza is member # 2 requesting? '))
+user_input_hm_pizza_slices3 = int(input('How many slices of pizza is member # 3 requesting? '))
+user_input_hm_pizza_slices4 = int(input('How many slices of pizza is member # 4 requesting? '))
+
+pizza = 8
+slice_per_member = (user_input_hm_pizza_slices1 + user_input_hm_pizza_slices2 + user_input_hm_pizza_slices3 + user_input_hm_pizza_slices4)
+recommended_box_order = math.ceil(slice_per_member/pizza)
+remainder = (slice_per_member%pizza)
+print('When we combine the total number of requested pizza, the value equals to', slice_per_member, 'slices of pizza. This mean you would need to order at least', recommended_box_order, 'boxes of pizza.') 
+print('After you order', recommended_box_order, 'boxes of pizza, there will be at least', remainder, 'remaining.')
+
+
+
